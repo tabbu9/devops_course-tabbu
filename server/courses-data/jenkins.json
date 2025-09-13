@@ -1,0 +1,42 @@
+{
+  "title": "Jenkins Masterclass",
+  "description": "End-to-end Jenkins course covering installation, pipelines, jobs, plugins, distributed builds, and security.",
+  "subtopics": [
+    {
+      "title": "What is Jenkins?",
+      "content": "Jenkins is a leading open-source automation server for building, testing, and deploying software. It enables continuous integration and continuous delivery (CI/CD) of projects."
+    },
+    {
+      "title": "Installing Jenkins",
+      "content": "Jenkins can be installed as a standalone WAR file (run with `java -jar jenkins.war`), via native packages, or as a Docker container. Access Jenkins UI at http://localhost:8080."
+    },
+    {
+      "title": "Jenkins Jobs",
+      "content": "Jobs are tasks Jenkins can perform (build, test, deploy). Types: Freestyle, Pipeline, Multibranch, etc. Configure jobs with source code, build triggers, and post-build actions."
+    },
+    {
+      "title": "Pipelines",
+      "content": "Jenkins Pipeline is a suite of plugins that supports integrating and implementing continuous delivery pipelines. Pipelines can be defined with a Jenkinsfile (Groovy syntax) in source control:\n```\npipeline {\n  agent any\n  stages {\n    stage('Build') { steps { sh 'make' } }\n    stage('Test') { steps { sh 'make test' } }\n    stage('Deploy') { steps { sh 'make deploy' } }\n  }\n}\n```"
+    },
+    {
+      "title": "Plugins",
+      "content": "Jenkins has 1800+ plugins for SCM, build tools, notification, authentication, and more. Install and manage plugins via the Jenkins UI."
+    },
+    {
+      "title": "Distributed Builds",
+      "content": "Jenkins supports distributed builds with master-agent architecture. Agents (slaves) execute jobs on remote machines."
+    },
+    {
+      "title": "Integrating with Git and Docker",
+      "content": "- Source Code Management: Configure jobs/pipelines to pull from GitHub, GitLab, Bitbucket.\n- Docker: Build and deploy Docker images from Jenkins pipelines."
+    },
+    {
+      "title": "Security Best Practices",
+      "content": "- Set up user authentication and authorization\n- Use credentials binding for secrets\n- Regularly update Jenkins and plugins\n- Restrict script approval and use of dangerous plugins"
+    },
+    {
+      "title": "Notifications and Reporting",
+      "content": "Configure Jenkins to send build notifications via email, Slack, or webhook. Use plugins for test reports and code coverage."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Kubernetes Complete Guide",
+  "description": "Learn Kubernetes from scratch—architecture, pods, deployments, services, networking, and operations.",
+  "subtopics": [
+    {
+      "title": "What is Kubernetes?",
+      "content": "Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers into logical units called pods for easy management and discovery."
+    },
+    {
+      "title": "Kubernetes Architecture",
+      "content": "- Master Node: Controls the cluster (API server, etcd, scheduler, controller manager).\n- Worker Nodes: Run application pods.\n- Key concepts: Pod, ReplicaSet, Deployment, Service, Namespace."
+    },
+    {
+      "title": "Pods and Containers",
+      "content": "A Pod is the smallest deployable unit in Kubernetes—one or more containers with shared storage/network. Pods are ephemeral: they can be replaced at any time."
+    },
+    {
+      "title": "Deployments",
+      "content": "A Deployment manages a ReplicaSet and provides declarative updates for Pods. Example YAML:\n```\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: nginx:1.14.2\n        ports:\n        - containerPort: 80\n```\nApply with: `kubectl apply -f deployment.yaml`"
+    },
+    {
+      "title": "Services and Networking",
+      "content": "Kubernetes Services expose pods on a network. Types: ClusterIP (internal), NodePort (external), LoadBalancer (external cloud load balancer)."
+    },
+    {
+      "title": "ConfigMaps and Secrets",
+      "content": "ConfigMaps hold non-confidential configuration. Secrets hold sensitive data (passwords, tokens). Both are injected into pods as env vars or volumes."
+    },
+    {
+      "title": "Kubernetes CLI - kubectl",
+      "content": "`kubectl get pods` — List pods\n`kubectl describe pod [name]` — Details\n`kubectl logs [pod]` — View logs\n`kubectl exec -it [pod] -- /bin/sh` — Shell into pod"
+    },
+    {
+      "title": "Scaling and Autoscaling",
+      "content": "Scale deployments with `kubectl scale deployment [name] --replicas=5`. Use Horizontal Pod Autoscaler to scale based on CPU/memory."
+    },
+    {
+      "title": "Persistent Volumes (PVs) and Claims (PVCs)",
+      "content": "PVs are cluster resources for storage; PVCs are requests for storage by users. Bind PVCs to PVs for data persistence."
+    },
+    {
+      "title": "Helm",
+      "content": "Helm is a package manager for Kubernetes. Helm charts define, install, and upgrade complex Kubernetes applications."
+    },
+    {
+      "title": "Kubernetes Best Practices",
+      "content": "- Use namespaces for environment separation\n- Set resource limits\n- Monitor pods with liveness/readiness probes\n- Use RBAC for access control\n- Automate deployments with CI/CD"
+    }
+  ]
+}

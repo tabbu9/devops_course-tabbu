@@ -1,0 +1,54 @@
+{
+  "title": "Docker Deep Dive",
+  "description": "A complete Docker course, covering container basics, installation, images, CLI, Compose, networks, and best practices.",
+  "subtopics": [
+    {
+      "title": "What is Docker?",
+      "content": "Docker is an open-source platform that automates the deployment, scaling, and management of applications using containerization technology. Containers allow developers to package applications with all dependencies and ship them as a single unit, ensuring consistency across development, testing, and production."
+    },
+    {
+      "title": "Why Use Docker?",
+      "content": "Docker solves 'it works on my machine' problems by providing isolated environments. Benefits include:\n- Portability\n- Consistency\n- Resource efficiency\n- Faster deployment\n- Simplified dependency management"
+    },
+    {
+      "title": "Installing Docker",
+      "content": "1. Download Docker Desktop for Windows or Mac from the Docker website.\n2. On Linux, install with your package manager (e.g., `sudo apt-get install docker-ce`).\n3. After installation, verify with `docker --version` and start Docker service if needed."
+    },
+    {
+      "title": "Hello World with Docker",
+      "content": "Run your first container: `docker run hello-world`\nThis command downloads a test image and runs it in a container, verifying your Docker installation."
+    },
+    {
+      "title": "Docker Architecture",
+      "content": "Docker has three main components:\n- Docker Client: CLI tool to interact with Docker daemon.\n- Docker Daemon: Runs on the host machine, manages containers and images.\n- Docker Registries: Stores Docker images (e.g., Docker Hub)."
+    },
+    {
+      "title": "Docker Images vs Containers",
+      "content": "- Image: A read-only template with application code and dependencies.\n- Container: A running instance of an image."
+    },
+    {
+      "title": "Docker CLI Basics",
+      "content": "`docker ps` — List running containers\n`docker images` — List images\n`docker run` — Run a new container\n`docker stop` — Stop a running container\n`docker rm` — Remove a container\n`docker rmi` — Remove an image\n`docker logs` — View container logs"
+    },
+    {
+      "title": "Building Images with Dockerfile",
+      "content": "A Dockerfile is a script containing instructions to build a Docker image. Example:\n```\nFROM node:20-alpine\nWORKDIR /app\nCOPY . .\nRUN npm install\nCMD [\"npm\", \"start\"]\n```\nBuild with: `docker build -t my-app .`"
+    },
+    {
+      "title": "Docker Compose",
+      "content": "Docker Compose lets you define and run multi-container applications with a single YAML file. Example:\n```\nversion: '3'\nservices:\n  web:\n    build: .\n    ports:\n      - \"5000:5000\"\n  db:\n    image: postgres\n```\nRun with: `docker compose up`"
+    },
+    {
+      "title": "Docker Networking",
+      "content": "Docker creates isolated networks (bridge, host, overlay) so containers can communicate securely. Use `docker network ls` and `docker network create` for management."
+    },
+    {
+      "title": "Volumes & Data Persistence",
+      "content": "Volumes are the preferred way to persist data in Docker. Example: `docker run -v myvolume:/data myimage`"
+    },
+    {
+      "title": "Best Practices",
+      "content": "- Use small base images (e.g., Alpine)\n- Minimize layers in Dockerfile\n- Don’t run as root\n- Clean up unused images/containers\n- Use .dockerignore"
+    }
+  ]
+}

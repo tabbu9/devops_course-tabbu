@@ -1,0 +1,38 @@
+{
+  "title": "SonarQube Complete Course",
+  "description": "Master SonarQube for code quality, static analysis, metrics, and integration with CI pipelines.",
+  "subtopics": [
+    {
+      "title": "What is SonarQube?",
+      "content": "SonarQube is an open-source platform for continuous inspection of code quality. It performs static code analysis to detect bugs, code smells, and security vulnerabilities in over 25 programming languages."
+    },
+    {
+      "title": "Installing SonarQube",
+      "content": "Download SonarQube from the official site and extract it. Start the server with the provided script (Windows: StartSonar.bat, Linux: sonar.sh). Access the dashboard at http://localhost:9000."
+    },
+    {
+      "title": "Analyzing Projects",
+      "content": "Install and configure a SonarQube scanner (CLI, Maven, Gradle, etc.). Run analysis with project-specific configuration. Example CLI:\n```\nsonar-scanner \\\n  -Dsonar.projectKey=myproject \\\n  -Dsonar.sources=. \\\n  -Dsonar.host.url=http://localhost:9000 \\\n  -Dsonar.login=your_token\n```"
+    },
+    {
+      "title": "Quality Profiles and Gates",
+      "content": "Quality Profiles define rules for analysis. Quality Gates enforce standards (e.g., no critical issues allowed) before merging or releasing."
+    },
+    {
+      "title": "SonarQube Metrics",
+      "content": "- Bugs: Defects that could lead to errors\n- Vulnerabilities: Security risks\n- Code Smells: Maintainability issues\n- Coverage: Test coverage percent\n- Duplications: Duplicate code blocks"
+    },
+    {
+      "title": "Integrating with CI/CD",
+      "content": "SonarQube can be integrated into Jenkins, GitHub Actions, GitLab CI, and others to automatically analyze code during pipelines."
+    },
+    {
+      "title": "Security Analysis",
+      "content": "SonarQube detects security hotspots and vulnerabilities, helping teams address OWASP Top 10 risks and comply with standards."
+    },
+    {
+      "title": "SonarQube Best Practices",
+      "content": "- Regularly update rules and plugins\n- Analyze code on every commit\n- Set up notifications for new issues\n- Use badges for project dashboards"
+    }
+  ]
+}

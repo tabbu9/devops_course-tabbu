@@ -1,0 +1,50 @@
+{
+  "title": "AWS Services Essentials",
+  "description": "In-depth AWS course covering key services, architecture, IAM, compute, storage, networking, and monitoring.",
+  "subtopics": [
+    {
+      "title": "Introduction to AWS",
+      "content": "Amazon Web Services (AWS) is the world's largest cloud platform, offering compute, storage, networking, databases, analytics, machine learning, and more, on-demand."
+    },
+    {
+      "title": "AWS Global Infrastructure",
+      "content": "AWS regions are physical locations worldwide. Each region has multiple isolated Availability Zones (AZs) for high availability."
+    },
+    {
+      "title": "Identity and Access Management (IAM)",
+      "content": "IAM controls user and service permissions. IAM components: Users, Groups, Roles, Policies. Principle of least privilege is recommended."
+    },
+    {
+      "title": "Compute Services: EC2 and Lambda",
+      "content": "- EC2: Virtual servers in the cloud. Choose instance type, OS, security groups.\n- Lambda: Serverless compute. Run code in response to events, pay only for usage."
+    },
+    {
+      "title": "Storage Services: S3 and EBS",
+      "content": "- S3: Scalable object storage for files, backups, static sites.\n- EBS: Block storage attached to EC2 instances."
+    },
+    {
+      "title": "Networking: VPC, Subnets, and Security Groups",
+      "content": "VPC (Virtual Private Cloud) lets you provision a logically isolated network. Subnets divide VPC into segments. Security Groups control inbound/outbound traffic."
+    },
+    {
+      "title": "Databases: RDS and DynamoDB",
+      "content": "- RDS: Managed relational database (MySQL, PostgreSQL, Oracle, SQL Server).\n- DynamoDB: Managed NoSQL database."
+    },
+    {
+      "title": "Monitoring: CloudWatch",
+      "content": "CloudWatch monitors AWS resources and applications in real time. Use metrics, logs, and alarms to automate responses."
+    },
+    {
+      "title": "Autoscaling and Load Balancers",
+      "content": "Auto Scaling adjusts EC2 capacity to demand. Elastic Load Balancer (ELB) distributes incoming traffic to multiple EC2 instances for fault tolerance."
+    },
+    {
+      "title": "AWS CLI and SDKs",
+      "content": "AWS CLI enables command-line management of AWS services. SDKs are available for many programming languages."
+    },
+    {
+      "title": "AWS Security Best Practices",
+      "content": "- Enable MFA on root account\n- Use IAM roles for EC2\n- Encrypt data at rest and in transit\n- Use CloudTrail for auditing"
+    }
+  ]
+}
